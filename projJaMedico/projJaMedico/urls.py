@@ -22,4 +22,4 @@ from pacientes import urls as pacientes_url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('paciente/', include(pacientes_url))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
